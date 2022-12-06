@@ -7,3 +7,4 @@ class Game(models.Model):
   year_released = models.DateField()
   number_of_players = models.IntegerField()
   play_time = models.TimeField()
+  age_rec = models.IntegerField()

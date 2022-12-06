@@ -1,0 +1,11 @@
+[
+  {
+    "model": "raterapi.player",
+    "pk": 1,
+    "fields": {
+      "uid": "y4Ln4SyXJlORdE5cyQjOeiAV2962",
+      "bio": "",
+      "name": "Rochelle"
+    }
+  }
+]

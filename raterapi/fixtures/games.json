@@ -1,0 +1,15 @@
+[
+  {
+    "model": "raterapi.game",
+    "pk": 1,
+    "fields": {
+      "description":"Catan is a board game for two to four players in which you compete to gather resources and build the biggest settlements on the fictional island of Catan",
+      "title":"Catan",
+      "designer": "Klaus Teuber",
+      "year_released": "1995-01-01",
+      "number_of_players": 4,
+      "play_time": "2:00",
+      "age_rec": 10
+    }
+  }
+]
