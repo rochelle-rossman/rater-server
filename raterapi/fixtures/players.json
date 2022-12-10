@@ -5,7 +5,16 @@
     "fields": {
       "uid": "y4Ln4SyXJlORdE5cyQjOeiAV2962",
       "bio": "",
-      "name": "Rochelle"
+      "name": "Rochelle Rossman"
+    }
+  },
+  {
+    "model":"raterapi.player",
+    "pk": 2,
+    "fields":{
+      "uid":"2",
+      "bio": "GAME LIFE",
+      "name": "Mitch McCullough"
     }
   }
 ]

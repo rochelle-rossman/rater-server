@@ -9,7 +9,22 @@
       "year_released": "1995-01-01",
       "number_of_players": 4,
       "play_time": "2:00",
-      "age_rec": 10
+      "age_rec": 10,
+      "category_id": 1
+    }
+  },
+  {
+    "model": "raterapi.game",
+    "pk": 2,
+    "fields": {
+      "description": "Each player uses their hand to form combinations of three or more cards, to get more than the 100 points required to win the game before their opponent does so when played over several hands.",
+      "title": "Gin Rummy",
+      "designer": "Elwood Baker",
+      "year_released": "1909-01-01",
+      "number_of_players": 4,
+      "play_time": "00:30",
+      "age_rec": 10,
+      "category_id": 3
     }
   }
 ]

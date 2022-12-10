@@ -21,7 +21,8 @@ def check_user(request):
         data = {
             'id': player.id,
             'uid': player.uid,
-            'bio': player.bio
+            'bio': player.bio,
+            'name': player.name
         }
         return Response(data)
     except:
@@ -39,6 +40,7 @@ def register_user(request):
 
     # Now save the user info in the raterapi_player table
     player = Player.objects.create(
+        name=request.data['name'],
         bio=request.data['bio'],
         uid=request.data['uid']
     )
