@@ -1,0 +1,20 @@
+[
+  {
+    "model": "raterapi.review",
+    "pk": 1,
+    "fields": {
+      "player_id": 1,
+      "game_id": 1,
+      "comment": "There are several rules and at first it can seem complicated. It is actually pretty easy to learn but it is hard to master. (the mark of a really good game)"
+    }
+  },
+  {
+    "model":"raterapi.review",
+    "pk": 2,
+    "fields":{
+      "player_id": 1,
+      "game_id": 2,
+      "comment":"Took a little while to get the flow of the game down with the instructions but once you do it is pretty fun."
+    }
+  }
+]
