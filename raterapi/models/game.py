@@ -9,4 +9,16 @@ class Game(models.Model):
   number_of_players = models.IntegerField()
   play_time = models.TimeField()
   age_rec = models.IntegerField()
-  category_id = models.ForeignKey(Category, on_delete=models.CASCADE)
+  
+  @property 
+  def average_rating(self):
+    """average rating for each game"""
+    ratings = self.ratings.all()
+    
+    total_rating = 0
+    for rating in ratings:
+      total_rating += rating.rating
+      
+    if len(ratings):
+      average_rating = total_rating/len(ratings)
+      return average_rating

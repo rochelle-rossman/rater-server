@@ -23,7 +23,6 @@ class GameView(ViewSet):
     
   def create(self, request):
     """Handle POST requests to create a new game"""
-    category_id = Category.objects.get(pk=request.data["category_id"])
     game = Game.objects.create(
       title=request.data["title"],
       description=request.data["description"],
@@ -32,7 +31,6 @@ class GameView(ViewSet):
       number_of_players=request.data["number_of_players"],
       play_time=request.data["play_time"],
       age_rec=request.data["age_rec"],
-      category_id=category_id
     )
     serializer = GameSerializer(game)
     return Response(serializer.data)
@@ -40,7 +38,6 @@ class GameView(ViewSet):
   def update(self, request, pk):
     """Handles PUT requests for updating a game"""
     game = Game.objects.get(pk=pk)
-    category_id = Category.objects.get(pk=request.data["category_id"])
     game.title = request.data["title"]
     game.description = request.data["description"]
     game.designer = request.data["designer"]
@@ -48,11 +45,10 @@ class GameView(ViewSet):
     game.number_of_players = request.data["number_of_players"]
     game.play_time = request.data["play_time"]
     game.age_rec = request.data["age_rec"]
-    game.category_id = category_id
     game.save()
     return Response(None, status=status.HTTP_204_NO_CONTENT)
 class GameSerializer(serializers.ModelSerializer):
   class Meta:
     model = Game
-    fields = ('id', 'description', 'title', 'designer', 'year_released', 'number_of_players', 'play_time', 'age_rec', 'category_id')
-    depth = 2
+    fields = ('id', 'description', 'title', 'designer', 'year_released', 'number_of_players', 'play_time', 'age_rec', 'average_rating')
+    depth = 3

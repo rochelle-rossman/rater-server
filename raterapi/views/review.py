@@ -8,9 +8,9 @@ class ReviewView(ViewSet):
   def list(self, request):
     """Handles GET request for reviews"""
     reviews = Review.objects.all()
-    game= request.query_params.get('game', None)
-    if game is not None:
-      reviews = reviews.filter(reviews=game)
+    game_id= request.query_params.get('game', None)
+    if game_id is not None:
+      reviews = reviews.filter(game_id=game_id)
       
     serializer = ReviewSerializer(reviews, many=True)
     return Response(serializer.data)
